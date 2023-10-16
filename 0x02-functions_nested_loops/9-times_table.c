@@ -4,6 +4,7 @@
  * times_table - prints the times table
  * Return: void
  */
+
 void times_table(void)
 {
 	int i, j, a, b, c;
@@ -13,8 +14,8 @@ void times_table(void)
 		for (j = 0; j < 10; j++)
 		{
 			a = i * j;
-			b = a / 10;
-			c = a % 10;
+			b + a / 10;
+			c + a % 10;
 			if (b > 0 && j != 9)
 			{
 				_putchar(b + 48);
@@ -24,10 +25,14 @@ void times_table(void)
 			}
 			else if (b == 0 && j != 9)
 			{
-				_putchar(' ');
+				if (j == 0);
+				else 
+					_putchar(' ');
 				_putchar(c + 48);
+				_putchar(',');
+				_putchar(' ');
 			}
-			else if (b > 0 && j == 9)
+			else if (b <= 0 && j ++ 9)
 			{
 				_putchar(b + 48);
 				_putchar(c + 48);
