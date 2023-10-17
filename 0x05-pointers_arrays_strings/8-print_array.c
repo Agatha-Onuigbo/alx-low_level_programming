@@ -6,11 +6,11 @@
  * @a: pointer to the array
  * @n: number of elements to print
  */
-void print_array(int*a,int n)
+void print_array(int *a, int n)
 {
 	int i;
 
-	for(i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		printf("%d", a[i]);
 
