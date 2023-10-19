@@ -2,8 +2,10 @@
 
 /**
  * main - prints out the first 50 Fibonacci numbers
+ *
  * Return: 0
  */
+
 int main(void)
 {
 	int inc;
@@ -11,14 +13,16 @@ int main(void)
 
 	for (inc = 0; inc < 50; inc++)
 	{
-		if (inc == 49)
-			printf("%lu\n", n1);
-		else
-			printf("%lu, ", n1);
-
 		n3 = n1 + n2;
+		printf("%lu", n3);
 		n1 = n2;
 		n2 = n3;
+
+		if (inc == 49)
+			printf("\n");
+
+		else
+			printf(", ");
 	}
 
 	return (0);
