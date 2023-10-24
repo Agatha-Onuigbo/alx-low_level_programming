@@ -15,20 +15,22 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*s)
 	{
+		char *a;
 		FLAG = 0;
-		for (char *a = accept; *a; a++)
+		for (a = accept; *a; a++)
 		{
 			if (*s == *a)
 			{
 				count++;
 				FLAG = 1;
 				break;
-																					            }
-											            }
-							        if (FLAG == 0)
-									            return count;
-								        s++;
-									    }
+			}
+		}
+		if (FLAG == 0)
+			return (count);
 
-		        return count;
+		s++;
+	}
+
+	return (count);
 }
