@@ -4,8 +4,7 @@
 /**
  * print_number - Prints an integer.
  * @n: The integer to prints.
- *
- * Return: Always 0
+ * Return: Nothing!
  */
 void print_number(int n)
 {
@@ -15,13 +14,10 @@ void print_number(int n)
 	{
 		n *= -1;
 		k = n;
-		putchar('-');
+		_putchar('-');
 	}
-
 	k /= 10;
-
 	if (k != 0)
 		print_number(k);
-
-	putchar(n % 10 + '0');
+	_putchar((unsigned int) n % 10 + '0');
 }
