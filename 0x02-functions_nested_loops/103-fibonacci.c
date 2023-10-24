@@ -1,29 +1,23 @@
 #include <stdio.h>
 
 /**
- * main - prints out the first 50 Fibonacci numbers
- *
- * Return: 0
+ * main - Prints the sum of even fibonacci numbers
+ * less than 4000000.
+ * Return: Nothing!
  */
-
 int main(void)
 {
-	int inc;
-	unsigned long n1 = 0, n2 = 1, n3;
+	int i = 0;
+	long j = 1, k = 2, sum = k;
 
-	for (inc = 0; inc < 50; inc++)
+	while (k + j < 4000000)
 	{
-		n3 = n1 + n2;
-		printf("%lu", n3);
-		n1 = n2;
-		n2 = n3;
-
-		if (inc == 49)
-			printf("\n");
-
-		else
-			printf(", ");
+		k += j;
+		if (k % 2 == 0)
+			sum += k;
+		j = k - j;
+		++i;
 	}
-
+	printf("%ld\n", sum);
 	return (0);
 }
