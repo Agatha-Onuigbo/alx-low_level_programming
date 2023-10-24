@@ -1,49 +1,40 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * print_times_table - prints times table
- * @n: times table to use
- * Return: void
+ * print_times_table - Prints the times table of the imput,
+ * starting with 0.
+ * @n: The value of the times table to be printed.
  */
 void print_times_table(int n)
 {
-	if (n < 0 || n > 15)
-		return;
+	int num, mult, prod;
 
-	int a, b, product;
-
-	for (a = 0; a <= n; a++)
+	if (n >= 0 && n <= 15)
 	{
-		for (b = 0; b <= n; b++)
+		for (num = 0; num <= n; num++)
 		{
-			product = a * b;
-
-			if (b == 0)
-				putchar('0' + product);
-			else
+			_putchar('0');
+			for (mult = 1; mult <= n; mult++)
 			{
-				putchar(' ');
-				if (product < 10)
+				_putchar(',');
+				_putchar(' ');
+				prod = num * mult;
+				if (prod <= 99)
+				_putchar(' ');
+				if (prod <= 9)
+				_putchar(' ');
+				if (prod >= 100)
 				{
-					putchar(' ');
-					putchar(' ');
+					_putchar((prod / 100) + '0');
+					_putchar(((prod / 10)) % 10 + '0');
 				}
-				else if (product < 100)
-					putchar(' ');
-
-				putchar('0' + product / 100);
-				putchar('0' + (product / 10) % 10);
-				putchar('0' + product % 10);
+				else if (prod <= 99 && prod >= 10)
+				{
+					_putchar((prod / 10) + '0');
+				}
+				_putchar((prod % 10) + '0');
 			}
-
-			if (b < n)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			_putchar('\n');
 		}
-
-		putchar('\n');
 	}
 }
